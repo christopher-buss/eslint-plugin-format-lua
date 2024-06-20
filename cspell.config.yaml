@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json
+
+version: '0.2'
+language: en
+words:
+  - stylua
+  - tsdoc
+flagWords: []
+maxNumberOfProblems: 1000
+ignorePaths:
+  - .gitignore
+  - .vscode/**
+  - '*-lock.yaml'
+  - '*.aff'
+  - '*.dic'
+  - '*.gz'
+  - '*.lock'
+  - '*.log'
+  - '*.snap'
+  - '*.trie'
+  - '**/.git/!(COMMIT_EDITMSG)'
+  - '**/.git/!(COMMIT_EDITMSG)/**'
+  - CHANGELOG.md
+  - node_modules
+  - /package.json
+useGitignore: true
