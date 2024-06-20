@@ -1,5 +1,5 @@
 {
-	"name": "eslint-plugin-format-luau",
+	"name": "eslint-plugin-format-lua",
 	"type": "module",
 	"version": "0.1.0",
 	"packageManager": "pnpm@9.4.0",
