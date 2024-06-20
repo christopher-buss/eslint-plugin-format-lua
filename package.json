@@ -6,12 +6,79 @@
 	"description": "",
 	"author": "",
 	"license": "ISC",
-	"keywords": [],
-	"main": "index.js",
-	"scripts": {},
+	"keywords": [
+		"eslint",
+		"eslint-plugin",
+		"formatters",
+		"lua",
+		"luau"
+	],
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs"
+		},
+		"./define-config-support": {
+			"types": "./dts/define-config-support.d.ts"
+		},
+		"./rule-options": {
+			"types": "./dts/rule-options.d.ts"
+		}
+	},
+	"main": "./dist/index.mjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"typesVersions": {
+		"*": {
+			"*": [
+				"./dist/*",
+				"./dist/index.d.ts"
+			]
+		}
+	},
+	"files": [
+		"dist",
+		"dts",
+		"workers"
+	],
+	"scripts": {
+		"build": "unbuild",
+		"dev": "unbuild --stub",
+		"lint": "nr build && eslint .",
+		"prepublishOnly": "nr build",
+		"release": "bumpp && npm publish",
+		"start": "esno src/index.ts",
+		"typecheck": "tsc --noEmit",
+		"prepare": "simple-git-hooks"
+	},
+	"peerDependencies": {
+		"eslint": "^8.40.0 || ^9.0.0"
+	},
+	"dependencies": {
+		"@johnnymorganz/stylua": "^0.20.0",
+		"eslint-formatting-reporter": "^0.0.0",
+		"eslint-parser-plain": "^0.1.0",
+		"synckit": "^0.9.0"
+	},
 	"devDependencies": {
 		"@isentinel/eslint-config": "0.6.0-beta.2",
+		"@types/eslint": "^8.56.10",
+		"@types/node": "^20.14.7",
+		"bumpp": "^9.4.1",
 		"bundle-require": "^5.0.0",
-		"eslint": "^9.5.0"
+		"eslint": "^9.5.0",
+		"esno": "^4.7.0",
+		"lint-staged": "^15.2.7",
+		"simple-git-hooks": "^2.11.1",
+		"typescript": "^5.4.5",
+		"unbuild": "^2.0.0"
+	},
+	"simple-git-hooks": {
+		"pre-commit": "npx lint-staged"
+	},
+	"lint-staged": {
+		"*": "eslint --fix"
 	}
 }
