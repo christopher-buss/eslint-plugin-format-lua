@@ -5,6 +5,7 @@ language: en
 words:
   - stylua
   - tsdoc
+  - johnnymorganz
 flagWords: []
 maxNumberOfProblems: 1000
 ignorePaths:
