@@ -17,9 +17,6 @@ importers:
       eslint-parser-plain:
         specifier: ^0.1.0
         version: 0.1.0
-      synckit:
-        specifier: ^0.9.0
-        version: 0.9.0
     devDependencies:
       '@isentinel/eslint-config':
         specifier: 0.6.3

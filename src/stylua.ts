@@ -1,32 +1,24 @@
-import { Config, OutputVerification, Range } from "@johnnymorganz/stylua";
+import { Config, formatCode, OutputVerification, Range } from "@johnnymorganz/stylua";
 
 import type { Rule } from "eslint";
-import { reportDifferences } from "eslint-formatting-reporter";
-import { join } from "node:path";
-import { createSyncFn } from "synckit";
-
-import { directoryWorkers } from "./directory";
-
-let format: (code: string, config: Config, range: Range, verify_output: number) => string;
-
-const config = new Config();
+import { messages, reportDifferences } from "eslint-formatting-reporter";
 
 export default {
 	create(context) {
-		if (!format) {
-			format = createSyncFn(join(directoryWorkers, "stylua.cjs")) as any;
-		}
+		const config = Config.new();
+		const range = Range.from_values();
 
 		return {
 			Program() {
 				const sourceCode = context.sourceCode.text;
 				try {
-					const formatted = format(
+					const formatted = formatCode(
 						sourceCode,
 						config,
-						Range.from_values(),
+						range,
 						OutputVerification.None,
 					);
+
 					reportDifferences(context, sourceCode, formatted);
 				} catch (err) {
 					console.log(err);
@@ -47,6 +39,7 @@ export default {
 			description: "Use stylua to format lua files",
 		},
 		fixable: "whitespace",
+		messages,
 		schema: [
 			{
 				additionalProperties: true,
