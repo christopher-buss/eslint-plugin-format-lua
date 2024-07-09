@@ -63,16 +63,16 @@
 		"synckit": "^0.9.0"
 	},
 	"devDependencies": {
-		"@isentinel/eslint-config": "0.6.0-beta.2",
+		"@isentinel/eslint-config": "0.6.3",
 		"@types/eslint": "^8.56.10",
-		"@types/node": "^20.14.7",
+		"@types/node": "^20.14.10",
 		"bumpp": "^9.4.1",
 		"bundle-require": "^5.0.0",
-		"eslint": "^9.5.0",
+		"eslint": "^9.6.0",
 		"esno": "^4.7.0",
 		"lint-staged": "^15.2.7",
 		"simple-git-hooks": "^2.11.1",
-		"typescript": "^5.4.5",
+		"typescript": "^5.5.3",
 		"unbuild": "^2.0.0"
 	},
 	"simple-git-hooks": {
