@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@johnnymorganz/stylua':
-        specifier: ^0.20.0
-        version: 0.20.0
+        specifier: latest
+        version: 2.1.0
       eslint-formatting-reporter:
         specifier: ^0.0.0
         version: 0.0.0(eslint@9.6.0)
       eslint-parser-plain:
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: ^0.1.1
+        version: 0.1.1
     devDependencies:
       '@antfu/ni':
         specifier: 0.21.12
@@ -732,8 +732,8 @@ packages:
     peerDependencies:
       eslint: '>=8.56.0'
 
-  '@johnnymorganz/stylua@0.20.0':
-    resolution: {integrity: sha512-8rsTwI/KFhMvRxsTMsUQnxrjkBVuq69bPv1m9B1v8NJSFlvAvkfrmRF/86w8oHVntwwt4OdbG3bEjjeqA3b8xw==}
+  '@johnnymorganz/stylua@2.1.0':
+    resolution: {integrity: sha512-reSwruLs7hWzXOveOj3nRQGSClKmsoLReLKLdhKSJePGDwOX+ZxMEv52UEjBNA0vAmj7MFklYku+TVA7D0WgJg==}
 
   '@jridgewell/gen-mapping@0.3.5':
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
@@ -1719,8 +1719,8 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
 
-  eslint-parser-plain@0.1.0:
-    resolution: {integrity: sha512-oOeA6FWU0UJT/Rxc3XF5Cq0nbIZbylm7j8+plqq0CZoE6m4u32OXJrR+9iy4srGMmF6v6pmgvP1zPxSRIGh3sg==}
+  eslint-parser-plain@0.1.1:
+    resolution: {integrity: sha512-KRgd6wuxH4U8kczqPp+Oyk4irThIhHWxgFgLDtpgjUGVIS3wGrJntvZW/p6hHq1T4FOwnOtCNkvAI4Kr+mQ/Hw==}
 
   eslint-plugin-antfu@2.3.3:
     resolution: {integrity: sha512-TAgYNuc20QyKw8NXtpzR3LeMTTv1qAJVKkjCVzjRSGiSR1EetEY7LRgQVhcgP/C1FnI87isQERAIkKvkYyLq0Q==}
@@ -4278,7 +4278,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@johnnymorganz/stylua@0.20.0': {}
+  '@johnnymorganz/stylua@2.1.0': {}
 
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:
@@ -5598,7 +5598,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-parser-plain@0.1.0: {}
+  eslint-parser-plain@0.1.1: {}
 
   eslint-plugin-antfu@2.3.3(eslint@9.6.0):
     dependencies:
@@ -5633,7 +5633,7 @@ snapshots:
       '@dprint/toml': 0.6.2
       eslint: 9.6.0
       eslint-formatting-reporter: 0.0.0(eslint@9.6.0)
-      eslint-parser-plain: 0.1.0
+      eslint-parser-plain: 0.1.1
       prettier: 3.3.2
       synckit: 0.9.0
 
