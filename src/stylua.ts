@@ -1,4 +1,4 @@
-import { Config, formatCode, OutputVerification, Range } from "@johnnymorganz/stylua";
+import { Config, formatCode, OutputVerification, Range } from "@isentinel/stylua";
 
 import type { Rule } from "eslint";
 import { messages, reportDifferences } from "eslint-formatting-reporter";
