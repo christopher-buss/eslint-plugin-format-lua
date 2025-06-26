@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@isentinel/stylua':
-        specifier: 2.1.0-esm.2
-        version: 2.1.0-esm.2
+        specifier: 2.1.0-esm.3
+        version: 2.1.0-esm.3
       eslint-formatting-reporter:
         specifier: ^0.0.0
         version: 0.0.0(eslint@9.6.0)
@@ -732,8 +732,8 @@ packages:
     peerDependencies:
       eslint: '>=8.56.0'
 
-  '@isentinel/stylua@2.1.0-esm.2':
-    resolution: {integrity: sha512-jCCuS4uA61n6krfgReEuS4uKY4f3HphNi0TM6t3YKSFEiTN7Cbs2mk66EopBMKpksOlITHMORAPrCStXXYupwQ==}
+  '@isentinel/stylua@2.1.0-esm.3':
+    resolution: {integrity: sha512-thwx7ptSzSGOZhzhxWD6cLOSYesk+5U3Ia/RzMrFc9djpv7LXe0spGCxJ/tWfYdJfg1ryU89rubdhhYxVlyMQg==}
 
   '@jridgewell/gen-mapping@0.3.5':
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
@@ -4137,7 +4137,7 @@ snapshots:
   '@es-joy/jsdoccomment@0.43.1':
     dependencies:
       '@types/eslint': 8.56.10
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.8
       '@typescript-eslint/types': 7.16.0
       comment-parser: 1.4.1
       esquery: 1.6.0
@@ -4392,7 +4392,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@isentinel/stylua@2.1.0-esm.2':
+  '@isentinel/stylua@2.1.0-esm.3':
     dependencies:
       rollup: 4.44.0
 
@@ -4481,7 +4481,7 @@ snapshots:
 
   '@rollup/pluginutils@5.1.0(rollup@3.29.4)':
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.8
       estree-walker: 2.0.2
       picomatch: 2.3.1
     optionalDependencies:
@@ -6506,7 +6506,7 @@ snapshots:
 
   is-reference@1.2.1:
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.8
 
   is-regex@1.1.4:
     dependencies:
