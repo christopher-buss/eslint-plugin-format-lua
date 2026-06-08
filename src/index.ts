@@ -1,18 +1,20 @@
-import type { Linter } from "eslint";
+import type { ESLint, Linter, Rule } from "eslint";
 import * as _parserPlain from "eslint-parser-plain";
 
 import stylua from "./stylua";
 
-const parserPlain: Linter.ParserModule = {
+const parserPlain: Linter.Parser = {
 	meta: {
 		name: "eslint-parser-plain",
 	},
 	...(_parserPlain as { parseForESLint: any }),
 };
 
-export default {
+const plugin: ESLint.Plugin & { parserPlain: Linter.Parser } = {
 	parserPlain,
 	rules: {
-		stylua,
+		stylua: stylua as unknown as Rule.RuleModule,
 	},
 };
+
+export default plugin;
