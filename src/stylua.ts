@@ -35,7 +35,6 @@ export default {
 	},
 	meta: {
 		docs: {
-			category: "Stylistic",
 			description: "Use stylua to format lua files",
 		},
 		fixable: "whitespace",
