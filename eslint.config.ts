@@ -1,5 +1,18 @@
-import style from "@isentinel/eslint-config";
+import isentinel from "@isentinel/eslint-config";
 
-export default style({
-	roblox: false,
-});
+export default isentinel(
+	{
+		pnpm: false,
+		roblox: false,
+		type: "package",
+		typescript: {
+			erasableOnly: true,
+		},
+	},
+	{
+		files: ["./package.json"],
+		rules: {
+			"package-json/require-bin": "off",
+		},
+	},
+);

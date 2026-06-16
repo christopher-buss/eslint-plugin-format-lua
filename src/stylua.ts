@@ -21,7 +21,7 @@ export default {
 
 					reportDifferences(context, sourceCode, formatted);
 				} catch (err) {
-					console.log(err);
+					console.warn(err);
 					context.report({
 						loc: {
 							end: { column: 0, line: 1 },

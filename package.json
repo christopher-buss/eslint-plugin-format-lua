@@ -1,11 +1,7 @@
 {
 	"name": "eslint-plugin-format-lua",
-	"type": "module",
 	"version": "1.0.0",
-	"packageManager": "pnpm@10.24.0",
-	"description": "",
-	"author": "",
-	"license": "ISC",
+	"description": "An ESLint plugin for formatting Lua code using Stylua.",
 	"keywords": [
 		"eslint",
 		"eslint-plugin",
@@ -13,7 +9,22 @@
 		"lua",
 		"luau"
 	],
+	"homepage": "https://github.com/christopher-buss/eslint-plugin-format-lua",
+	"bugs": {
+		"url": "https://github.com/christopher-buss/eslint-plugin-format-lua/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/christopher-buss/eslint-plugin-format-lua.git"
+	},
+	"license": "MIT",
+	"author": {
+		"email": "christopher.buss@pm.me",
+		"name": "Christopher Buss",
+		"url": "https://github.com/christopher-buss"
+	},
 	"sideEffects": false,
+	"type": "module",
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
@@ -42,21 +53,15 @@
 		"dist",
 		"dts"
 	],
-	"engines": {
-		"node": ">=20.19.0"
-	},
 	"scripts": {
 		"build": "unbuild",
 		"dev": "unbuild --stub",
 		"lint": "nr build && eslint .",
+		"prepare": "simple-git-hooks ./simple-git-hooks.ts",
 		"prepublishOnly": "nr build",
-		"release": "bumpp && npm publish",
+		"release": "bumpp",
 		"start": "esno src/index.ts",
-		"typecheck": "tsc --noEmit",
-		"prepare": "simple-git-hooks"
-	},
-	"peerDependencies": {
-		"eslint": "^8.40.0 || ^9.0.0 || ^10.0.0"
+		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
 		"@johnnymorganz/stylua": "^2.5.2",
@@ -65,22 +70,26 @@
 	},
 	"devDependencies": {
 		"@antfu/ni": "^30.1.0",
-		"@isentinel/eslint-config": "^0.6.3",
-		"@types/eslint": "^9.6.1",
+		"@isentinel/eslint-config": "5.2.0",
+		"@isentinel/tsconfig": "^1.2.0",
 		"@types/node": "^22.16.0",
 		"bumpp": "^11.1.0",
 		"bundle-require": "^5.1.0",
-		"eslint": "9.6.0",
+		"eslint": "^9.39.4",
+		"eslint-plugin-erasable-syntax-only": "^0.4.1",
+		"eslint-plugin-n": "^18.1.0",
 		"esno": "^4.8.0",
+		"jiti": "^2.7.0",
 		"lint-staged": "^17.0.7",
 		"simple-git-hooks": "^2.13.1",
-		"typescript": "^5.9.2",
+		"typescript": "^6.0.3",
 		"unbuild": "^3.6.1"
 	},
-	"simple-git-hooks": {
-		"pre-commit": "npx lint-staged"
+	"peerDependencies": {
+		"eslint": "^9.38.0 || ^10.0.0"
 	},
-	"lint-staged": {
-		"*": "eslint --fix"
+	"packageManager": "pnpm@11.7.0+sha512.19cc852c120c7125760f2443ee6be0ca5b40f9f50598de1a09a1f177503e010e57c23c77646e01e761de59bf874fb22a3398c33ab9691fc13eb946b6f0f4d620",
+	"engines": {
+		"node": ">=22.16.0"
 	}
 }
